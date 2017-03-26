@@ -63,11 +63,11 @@ module CommonHelpers
     end
   end
 
-  def find_request_by_search(user, request, opts = {})
+  def find_request_by_search(user, request, opts = {}, phrase)
     sign_in_as_user(user, opts)
     visit travel_sponsorships_path
     # Use the event filter
-    fill_in 'q_user_nickname_or_event_name_or_user_profile_full_name_cont', :with => opts[:phrase]
+    fill_in 'q_user_nickname_or_event_name_or_user_profile_full_name_cont', :with => phrase
     # show_bootstrap_multiselect_select("#q_event_id_in")
     # select(request.event.name, :from => "q_event_id_in")
     click_button "search"
