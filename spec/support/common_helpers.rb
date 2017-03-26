@@ -89,7 +89,7 @@ module CommonHelpers
       page.should have_content e.subject
       page.should have_content e.description
     end
-    click_button "all"
+    click_link "reset_search"
 
     fill_in 'q_user_nickname_or_event_name_or_user_profile_full_name_cont', :with => 'Tatooine69'
     # show_bootstrap_multiselect_select("#q_event_id_in")
