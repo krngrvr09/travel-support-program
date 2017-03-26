@@ -68,6 +68,7 @@ module CommonHelpers
     puts request
     puts request.event.name
     puts current_url
+    puts request.id
     
     sign_in_as_user(user, opts)
     visit travel_sponsorships_path
