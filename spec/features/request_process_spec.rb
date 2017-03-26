@@ -65,11 +65,12 @@ feature "Requests", "" do
     puts users(:luke).inspect
     puts users(:luke).profile.full_name
     puts users(:luke).nickname
-    find_request_by_search(users(:tspmember), @request, "luke")
+    puts events(:dagobah_camp).inspect
+    find_request_by_search(users(:tspmember), @request, users(:luke).profile.full_name.split(" ").first.downcase)
     click_link "Log out"
-    find_request_by_search(users(:tspmember), @request, "Tatooine69")
+    find_request_by_search(users(:tspmember), @request, users(:luke).nickname.upcase)
     click_link "Log out"
-    find_request_by_search(users(:tspmember), @request, "dagobah")
+    find_request_by_search(users(:tspmember), @request, events(:dagobah_camp).name.split(" ").first.upcase)
 
     # Failed approval
     click_link "Action"
