@@ -42,6 +42,9 @@ module CommonHelpers
   # @param [Hash]    opt      +password+: password used for authentication
   def find_request_as(user, request, opts = {})
     puts "!@!@!@!!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!"
+    puts request
+    puts request.event.name
+    puts current_url
     sign_in_as_user(user, opts)
     visit travel_sponsorships_path
     # Use the event filter
