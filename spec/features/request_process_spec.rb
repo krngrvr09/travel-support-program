@@ -59,13 +59,8 @@ feature "Requests", "" do
 
     # Log in as tspmember
     click_link "Log out"
-    # find_request_as(users(:tspmember), @request)
-    puts "users"
-    puts users(:luke)
-    puts users(:luke).inspect
-    puts users(:luke).profile.full_name
-    puts users(:luke).nickname
-    puts events(:dagobah_camp).inspect
+    find_request_as(users(:tspmember), @request)
+    click_link "Log out"
     find_request_by_search(users(:tspmember), @request, users(:luke).profile.full_name.split(" ").first.downcase)
     click_link "Log out"
     find_request_by_search(users(:tspmember), @request, users(:luke).nickname.upcase)
