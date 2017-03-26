@@ -63,6 +63,8 @@ feature "Requests", "" do
     puts "users"
     puts users(:luke)
     puts users(:luke).inspect
+    puts users(:luke).profile.full_name
+    puts users(:luke).nickname
     find_request_by_search(users(:tspmember), @request, "luke")
     click_link "Log out"
     find_request_by_search(users(:tspmember), @request, "Tatooine69")
