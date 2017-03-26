@@ -61,10 +61,10 @@ feature "Requests", "" do
     click_link "Log out"
     # find_request_as(users(:tspmember), @request)
     find_request_by_search(users(:tspmember), @request, {:phrase => "luke"})
-    # click_link "Log out"
-    # find_request_by_search(users(:tspmember), @request, {:phrase => "Tatooine69"})
-    # click_link "Log out"
-    # find_request_by_search(users(:tspmember), @request, {:phrase => "dagobah"})
+    click_link "Log out"
+    find_request_by_search(users(:tspmember), @request, {:phrase => "Tatooine69"})
+    click_link "Log out"
+    find_request_by_search(users(:tspmember), @request, {:phrase => "dagobah"})
 
     # Failed approval
     click_link "Action"
