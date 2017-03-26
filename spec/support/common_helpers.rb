@@ -64,8 +64,6 @@ module CommonHelpers
   end
 
   def find_request_by_search(user, request, opts = {})
-    puts request.expenses.subject
-    puts request.expenses.description
     sign_in_as_user(user, opts)
     visit travel_sponsorships_path
     # Use the event filter
@@ -79,6 +77,8 @@ module CommonHelpers
     find(:xpath, "//table[contains(@class,'requests')]//tbody/tr/td[1]//a[text()='##{request.id}']").click
     page.should have_content "request"
     request.expenses.each do |e|
+      puts e.subject
+      puts e.description
       page.should have_content e.subject
       page.should have_content e.description
     end
