@@ -59,7 +59,7 @@ feature "Requests", "" do
 
     # Log in as tspmember
     click_link "Log out"
-    find_request_as(users(:tspmember), @request)
+    # find_request_as(users(:tspmember), @request)
     find_request_by_search(users(:tspmember), @request)
 
     # Failed approval
