@@ -149,7 +149,7 @@ feature "Requests", "" do
     page.should have_content "from approved to accepted"
     page.should have_content "reimbursement process has started or can be started"
 
-    click_link "Log out"
+    # click_link "Log out"
     find_request_by_search(users(:tspmember), @request, users(:luke).profile.full_name.split(" ").first.downcase)
     
     click_link "Log out"

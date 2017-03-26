@@ -72,8 +72,6 @@ module CommonHelpers
     find(:xpath, "//table[contains(@class,'requests')]//tbody/tr/td[1]//a[text()='##{request.id}']").click
     page.should have_content "request"
     request.expenses.each do |e|
-      puts e.subject
-      puts e.description
       page.should have_content e.subject
       page.should have_content e.description
     end
