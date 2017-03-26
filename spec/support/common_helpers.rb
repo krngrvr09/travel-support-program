@@ -64,15 +64,7 @@ module CommonHelpers
   end
 
   def find_request_by_search(user, request, opts = {})
-    # puts "!@!@!@!!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!"
-    # puts request
-    # puts request.event.name
-    # puts current_url
-    # puts request.id
-    # puts request.inspect
-    # puts request.user.profile.full_name
-    # puts request.user.nickname
-    # puts request.user
+    puts opts
     sign_in_as_user(user, opts)
     visit travel_sponsorships_path
     # Use the event filter
