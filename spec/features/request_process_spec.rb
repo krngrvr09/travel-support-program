@@ -60,6 +60,8 @@ feature "Requests", "" do
     # Log in as tspmember
     click_link "Log out"
     # find_request_as(users(:tspmember), @request)
+    puts "users"
+    puts users(:luke)
     find_request_by_search(users(:tspmember), @request, "luke")
     click_link "Log out"
     find_request_by_search(users(:tspmember), @request, "Tatooine69")
