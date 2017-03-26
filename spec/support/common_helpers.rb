@@ -89,7 +89,7 @@ module CommonHelpers
       page.should have_content e.subject
       page.should have_content e.description
     end
-    click_on "reset_search"
+    visit travel_sponsorships_path
 
     fill_in 'q_user_nickname_or_event_name_or_user_profile_full_name_cont', :with => 'Tatooine69'
     # show_bootstrap_multiselect_select("#q_event_id_in")
@@ -104,7 +104,6 @@ module CommonHelpers
       page.should have_content e.subject
       page.should have_content e.description
     end
-    click_link "reset_search"
 
   end
 
