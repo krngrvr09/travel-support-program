@@ -64,7 +64,8 @@ module CommonHelpers
   end
 
   def find_request_by_search(user, request, opts = {})
-    puts opts
+    puts request.expenses.subject
+    puts request.expenses.description
     sign_in_as_user(user, opts)
     visit travel_sponsorships_path
     # Use the event filter
@@ -81,7 +82,6 @@ module CommonHelpers
       page.should have_content e.subject
       page.should have_content e.description
     end
-    # visit travel_sponsorships_path
   end
 
   #
