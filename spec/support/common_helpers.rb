@@ -59,7 +59,7 @@ module CommonHelpers
   end
 
   def find_request_by_search(user, request, opts = {}, phrase)
-    sign_in_as_user(user, opts)
+    # sign_in_as_user(user, opts)
     visit travel_sponsorships_path
     # Use the event filter
     fill_in 'q_user_nickname_or_event_name_or_user_profile_full_name_cont', :with => phrase
