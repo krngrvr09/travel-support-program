@@ -104,7 +104,7 @@ module CommonHelpers
       page.should have_content e.subject
       page.should have_content e.description
     end
-    click_button "all"
+    click_link "reset_search"
 
   end
 
