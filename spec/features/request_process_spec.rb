@@ -60,11 +60,11 @@ feature "Requests", "" do
     # Log in as tspmember
     click_link "Log out"
     # find_request_as(users(:tspmember), @request)
-    find_request_by_search(users(:tspmember), @request, phrase: "luke")
+    find_request_by_search(users(:tspmember), @request, "luke")
     click_link "Log out"
-    find_request_by_search(users(:tspmember), @request, phrase: "Tatooine69")
+    find_request_by_search(users(:tspmember), @request, "Tatooine69")
     click_link "Log out"
-    find_request_by_search(users(:tspmember), @request, phrase: "dagobah")
+    find_request_by_search(users(:tspmember), @request, "dagobah")
 
     # Failed approval
     click_link "Action"
