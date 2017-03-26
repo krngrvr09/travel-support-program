@@ -81,7 +81,7 @@ module CommonHelpers
       page.should have_content e.subject
       page.should have_content e.description
     end
-    visit travel_sponsorships_path
+    # visit travel_sponsorships_path
   end
 
   #
