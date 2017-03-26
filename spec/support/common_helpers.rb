@@ -70,7 +70,8 @@ module CommonHelpers
     puts current_url
     puts request.id
     puts request.inspect
-    puts request.user.name
+    puts request.user.profile.full_name
+    puts request.user.nickname
     sign_in_as_user(user, opts)
     visit travel_sponsorships_path
     # Use the event filter
