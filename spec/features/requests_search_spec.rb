@@ -8,8 +8,8 @@ feature "Requests Search", "" do
 		sign_in_as_user(users(:tspmember), opts)
 		visit travel_sponsorships_path
 		# Use the event filter
-		fill_in 'q_user_nickname_or_event_name_or_user_profile_full_name_cont', :with => users(:luke).profile.full_name.split(" ").first.downcase
-		click_button "search"
+		# fill_in 'q_user_nickname_or_event_name_or_user_profile_full_name_cont', :with => users(:luke).profile.full_name.split(" ").first.downcase
+		# click_button "search"
 		# Check the url to ensure that the form have been submitted
 		current_url.should match /event_id_in/
 		# If so, the request should be in the first page
