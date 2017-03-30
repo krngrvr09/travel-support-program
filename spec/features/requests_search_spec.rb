@@ -3,7 +3,7 @@ require 'spec_helper'
 feature "Requests Search", "" do
 	fixtures :all
 	scenario "Search by nickname", :js => true do
-		@request = Request.order(:created_at, :id).last
+		request = Request.order(:created_at, :id).last
 		opts={}
 		sign_in_as_user(users(:tspmember), opts)
 		visit travel_sponsorships_path
