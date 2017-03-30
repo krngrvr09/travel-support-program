@@ -11,7 +11,7 @@ feature "Requests Search", "" do
 		# fill_in 'q_user_nickname_or_event_name_or_user_profile_full_name_cont', :with => users(:luke).profile.full_name.split(" ").first.downcase
 		# click_button "search"
 		# Check the url to ensure that the form have been submitted
-		current_url.should match /event_id_in/
+		# current_url.should match /event_id_in/
 		# If so, the request should be in the first page
 		find(:xpath, "//table[contains(@class,'requests')]//tbody/tr/td[1]//a[text()='##{request.id}']").click
 		page.should have_content "request"
