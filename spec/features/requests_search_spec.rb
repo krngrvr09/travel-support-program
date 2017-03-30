@@ -25,6 +25,8 @@ feature "Requests Search", "" do
 	    page.should have_content "request was successfully created"
 	    page.should have_content "then submit the request using the 'Action' button"
 		request = Request.order(:created_at, :id).last
+		puts request
+		puts request.inspect
 		opts={}
 		click_link "Log out"
 
@@ -35,8 +37,8 @@ feature "Requests Search", "" do
 		click_button "search"
 		# # Check the url to ensure that the form have been submitted
 		current_url.should match /event_id_in/
-		puts page
-		puts page.inspect
+		# puts page
+		# puts page.inspect
 		# If so, the request should be in the first page
 		find(:xpath, "//table[contains(@class,'requests')]//tbody/tr/td[1]//a[text()='##{request.id}']").click
 		page.should have_content "request"
@@ -54,8 +56,8 @@ feature "Requests Search", "" do
 		click_button "search"
 		# # Check the url to ensure that the form have been submitted
 		current_url.should match /event_id_in/
-		puts page
-		puts page.inspect
+		# puts page
+		# puts page.inspect
 		# If so, the request should be in the first page
 		find(:xpath, "//table[contains(@class,'requests')]//tbody/tr/td[1]//a[text()='##{request.id}']").click
 		page.should have_content "request"
@@ -73,8 +75,8 @@ feature "Requests Search", "" do
 		click_button "search"
 		# # Check the url to ensure that the form have been submitted
 		current_url.should match /event_id_in/
-		puts page
-		puts page.inspect
+		# puts page
+		# puts page.inspect
 		# If so, the request should be in the first page
 		find(:xpath, "//table[contains(@class,'requests')]//tbody/tr/td[1]//a[text()='##{request.id}']").click
 		page.should have_content "request"
