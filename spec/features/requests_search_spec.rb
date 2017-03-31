@@ -49,6 +49,7 @@ feature "Requests Search", "" do
 	scenario "Search by nickname", :js => true do
 
 		# Search request using nickname
+		opts={}
 		sign_in_as_user(users(:tspmember), opts)
 		visit travel_sponsorships_path
 		# Use the event filter
@@ -68,6 +69,7 @@ feature "Requests Search", "" do
 
 	scenario "Search by event name", :js => true do
 		# Search request using event name
+		opts={}
 		sign_in_as_user(users(:tspmember), opts)
 		visit travel_sponsorships_path
 		# Use the event filter
